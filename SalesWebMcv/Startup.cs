@@ -28,7 +28,7 @@ namespace SalesWebMcv
             services.AddControllersWithViews();
 
             services.AddDbContext<SalesWebMcvContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SalesWebMcvContext")));
+                    options.UseMySql(Configuration.GetConnectionString("SalesWebMcvContext"), builder => builder.MigrationsAssembly("SalesWebMcv")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
