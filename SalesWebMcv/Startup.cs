@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMcv.Models;
 using SalesWebMcv.Data;
+using SalesWebMcv.Services;
 
 namespace SalesWebMcv
 {
@@ -32,6 +33,7 @@ namespace SalesWebMcv
                     options.UseMySql(Configuration.GetConnectionString("SalesWebMcvContext"), builder => builder.MigrationsAssembly("SalesWebMcv")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
