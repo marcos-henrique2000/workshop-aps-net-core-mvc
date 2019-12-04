@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SalesWebMcv.Models;
-using SalesWebMcv.Models.ViewModels;
+using SalesWebMcv.Models;
 
 namespace SalesWebMcv.Controllers
 {
@@ -34,7 +34,7 @@ namespace SalesWebMcv.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new SalesWebMcv.Models.ViewModels.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new SalesWebMcv.Models.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
